@@ -1,0 +1,1361 @@
+INFO main org.apache.spark.SparkContext - Running Spark version 1.6.1
+ INFO main org.apache.spark.SecurityManager - Changing view acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - Changing modify acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 53088.
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 Remoting - Starting remoting
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 Remoting - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.0.1.53:53101]
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriverActorSystem' on port 53101.
+ INFO main org.apache.spark.SparkEnv - Registering MapOutputTracker
+ INFO main org.apache.spark.SparkEnv - Registering BlockManagerMaster
+ INFO main org.apache.spark.storage.DiskBlockManager - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-5f9b3749-5485-4a11-8d88-950bb5542994
+ INFO main org.apache.spark.storage.MemoryStore - MemoryStore started with capacity 1123.1 MB
+ INFO main org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+ INFO main org.spark-project.jetty.server.Server - jetty-8.y.z-SNAPSHOT
+ INFO main org.spark-project.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:4040
+ INFO main org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+ INFO main org.apache.spark.ui.SparkUI - Started SparkUI at http://10.0.1.53:4040
+ INFO main org.apache.spark.executor.Executor - Starting executor ID driver on host localhost
+ INFO main org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53112.
+ INFO main org.apache.spark.network.netty.NettyBlockTransferService - Server created on 53112
+ INFO main org.apache.spark.storage.BlockManagerMaster - Trying to register BlockManager
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager localhost:53112 with 1123.1 MB RAM, BlockManagerId(driver, localhost, 53112)
+ INFO main org.apache.spark.storage.BlockManagerMaster - Registered BlockManager
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on localhost:53112 (size: 13.9 KB, free: 1123.1 MB)
+ INFO main org.apache.spark.SparkContext - Created broadcast 0 from textFile at TestNaiveBayes.scala:39
+ WARN main  - Your hostname, YF-changjinJ resolves to a loopback/non-reachable address: fe80:0:0:0:71f4:de5b:2450:4f1c%eth8, but we couldn't find any external IP address!
+ INFO main org.apache.hadoop.mapred.FileInputFormat - Total input paths to process : 10
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:44
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 0 (take at TestNaiveBayes.scala:44) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 0 (take at TestNaiveBayes.scala:44)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1 stored as values in memory (estimated size 3.4 KB, free 144.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2045.0 B, free 146.7 KB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_1_piece0 in memory on localhost:53112 (size: 2045.0 B, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 0.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 0.0 (TID 0)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 0.0 (TID 0). 5052 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 176 ms on localhost (1/1)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 0 (take at TestNaiveBayes.scala:44) finished in 0.199 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 0 finished: take at TestNaiveBayes.scala:44, took 0.300858 s
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_1_piece0 on localhost:53112 in memory (size: 2045.0 B, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 1
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:55
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 1 (take at TestNaiveBayes.scala:55) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 1 (take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2 stored as values in memory (estimated size 8.6 KB, free 150.0 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.4 KB, free 154.4 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_2_piece0 in memory on localhost:53112 (size: 4.4 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 1.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 1.0 (TID 1)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 416.817143 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 18.4776 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 1.0 (TID 1). 5875 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 577 ms on localhost (1/1)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 1 (take at TestNaiveBayes.scala:55) finished in 0.579 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 1 finished: take at TestNaiveBayes.scala:55, took 0.599399 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:61
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 2 (take at TestNaiveBayes.scala:61) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 2 (take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 9.3 KB, free 163.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.8 KB, free 168.5 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on localhost:53112 (size: 4.8 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 57.292242 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 43.586103 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 6622 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 182 ms on localhost (1/1)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (take at TestNaiveBayes.scala:61) finished in 0.183 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 2 finished: take at TestNaiveBayes.scala:61, took 0.202118 s
+ INFO main org.apache.spark.SparkContext - Starting job: treeAggregate at IDF.scala:54
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Registering RDD 17 (treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 3 (treeAggregate at IDF.scala:54) with 2 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 4 (treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 3)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 3)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 3 (MapPartitionsRDD[17] at treeAggregate at IDF.scala:54), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 11.4 KB, free 179.9 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.7 KB, free 185.6 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on localhost:53112 (size: 5.7 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[17] at treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 10 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3, localhost, partition 0,PROCESS_LOCAL, 2211 bytes)
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 3.0 (TID 4, localhost, partition 1,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 3.0 (TID 4)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000008.txt:0+5079486
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 43.083208 ms
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_3_piece0 on localhost:53112 in memory (size: 4.8 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 6
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 5
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 3.0 (TID 4). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 3.0 (TID 5, localhost, partition 2,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 2.0 in stage 3.0 (TID 5)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 3.0 (TID 4) in 1422 ms on localhost (1/10)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000010.txt:0+3811321
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 2.0 in stage 3.0 (TID 5). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 3.0 (TID 6, localhost, partition 3,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 3.0 (TID 5) in 520 ms on localhost (2/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 3.0 in stage 3.0 (TID 6)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000013.txt:0+5153953
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 3.0 in stage 3.0 (TID 6). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 3.0 (TID 7, localhost, partition 4,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 4.0 in stage 3.0 (TID 7)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 3.0 (TID 6) in 572 ms on localhost (3/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000014.txt:0+3129138
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 4.0 in stage 3.0 (TID 7). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 3.0 (TID 8, localhost, partition 5,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 5.0 in stage 3.0 (TID 8)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 3.0 (TID 7) in 291 ms on localhost (4/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000016.txt:0+4391412
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 3.0 (TID 9, localhost, partition 6,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 6.0 in stage 3.0 (TID 9)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 3003 ms on localhost (5/10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000020.txt:0+6799647
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 5.0 in stage 3.0 (TID 8). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 3.0 (TID 10, localhost, partition 7,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 7.0 in stage 3.0 (TID 10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000022.txt:0+5469067
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 3.0 (TID 8) in 395 ms on localhost (6/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 6.0 in stage 3.0 (TID 9). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 3.0 (TID 11, localhost, partition 8,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 3.0 (TID 9) in 507 ms on localhost (7/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 8.0 in stage 3.0 (TID 11)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000023.txt:0+7983568
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 7.0 in stage 3.0 (TID 10). 2399 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 3.0 (TID 12, localhost, partition 9,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 3.0 (TID 10) in 505 ms on localhost (8/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 9.0 in stage 3.0 (TID 12)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000024.txt:0+5414532
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 9.0 in stage 3.0 (TID 12). 2399 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 3.0 (TID 12) in 457 ms on localhost (9/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 8.0 in stage 3.0 (TID 11). 2399 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 3.0 (TID 11) in 681 ms on localhost (10/10)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 3 (treeAggregate at IDF.scala:54) finished in 4.190 s
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - running: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 4)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - failed: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 4 (MapPartitionsRDD[19] at treeAggregate at IDF.scala:54), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 3.0 KB, free 174.6 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 1850.0 B, free 176.4 KB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on localhost:53112 (size: 1850.0 B, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 2 missing tasks from ResultStage 4 (MapPartitionsRDD[19] at treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 4.0 with 2 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 4.0 (TID 13, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 4.0 (TID 14, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 4.0 (TID 13)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 1.0 in stage 4.0 (TID 14)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 5 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 5 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 6 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 1.0 in stage 4.0 (TID 14). 4021011 bytes result sent to driver
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 4.0 (TID 13). 4021011 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 4.0 (TID 14) in 182 ms on localhost (1/2)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 4.0 (TID 13) in 196 ms on localhost (2/2)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 4 (treeAggregate at IDF.scala:54) finished in 0.201 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 3 finished: treeAggregate at IDF.scala:54, took 4.462141 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:68
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 4 (take at TestNaiveBayes.scala:68) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 5 (take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 5 (MapPartitionsRDD[22] at take at TestNaiveBayes.scala:68), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 3.8 MB, free 4.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 740.7 KB, free 4.7 MB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on localhost:53112 (size: 740.7 KB, free: 1122.4 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[22] at take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 5.0 with 1 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 5.0 (TID 15, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 5.0 (TID 15)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 36.790989 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 14.167981 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 5.0 (TID 15). 4299 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 5.0 (TID 15) in 75 ms on localhost (1/1)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 5 (take at TestNaiveBayes.scala:68) finished in 0.075 s
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 4 finished: take at TestNaiveBayes.scala:68, took 0.101867 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:76
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 5 (take at TestNaiveBayes.scala:76) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 6 (take at TestNaiveBayes.scala:76)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 6 (MapPartitionsRDD[25] at map at TestNaiveBayes.scala:71), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 3.8 MB, free 8.5 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 741.1 KB, free 9.3 MB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on localhost:53112 (size: 741.1 KB, free: 1121.7 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[25] at map at TestNaiveBayes.scala:71)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 6.0 with 1 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 6.0 (TID 16, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 6.0 (TID 16)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 6.0 (TID 16). 4021978 bytes result sent to driver
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 6 (take at TestNaiveBayes.scala:76) finished in 0.035 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 6.0 (TID 16) in 34 ms on localhost (1/1)
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 5 finished: take at TestNaiveBayes.scala:76, took 0.066655 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.SparkContext - Starting job: collect at NaiveBayes.scala:401
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Registering RDD 26 (map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 6 (collect at NaiveBayes.scala:401) with 10 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 8 (collect at NaiveBayes.scala:401)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 7)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 7)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 7 (MapPartitionsRDD[26] at map at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 3.8 MB, free 12.4 MB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_7_piece0 on localhost:53112 in memory (size: 741.1 KB, free: 1122.4 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 13
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_6_piece0 on localhost:53112 in memory (size: 740.7 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 11
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 10
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_5_piece0 on localhost:53112 in memory (size: 1850.0 B, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 742.0 KB, free 4.7 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 9
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on localhost:53112 (size: 742.0 KB, free: 1122.4 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[26] at map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 10 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_4_piece0 on localhost:53112 in memory (size: 5.7 KB, free: 1122.4 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 8
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 17, localhost, partition 0,PROCESS_LOCAL, 2211 bytes)
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 7.0 (TID 18, localhost, partition 1,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 1.0 in stage 7.0 (TID 18)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 17)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned shuffle 0
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 7
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000008.txt:0+5079486
+ WARN Executor task launch worker-2 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+ WARN Executor task launch worker-2 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_2_piece0 on localhost:53112 in memory (size: 4.4 KB, free: 1122.4 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 4
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 3
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 1.0 in stage 7.0 (TID 18). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 7.0 (TID 19, localhost, partition 2,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 7.0 (TID 18) in 18764 ms on localhost (1/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 2.0 in stage 7.0 (TID 19)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000010.txt:0+3811321
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 2.0 in stage 7.0 (TID 19). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 7.0 (TID 20, localhost, partition 3,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 7.0 (TID 19) in 20422 ms on localhost (2/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 3.0 in stage 7.0 (TID 20)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000013.txt:0+5153953
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 3.0 in stage 7.0 (TID 20). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 7.0 (TID 21, localhost, partition 4,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 4.0 in stage 7.0 (TID 21)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 7.0 (TID 20) in 11030 ms on localhost (3/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000014.txt:0+3129138
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 4.0 in stage 7.0 (TID 21). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 7.0 (TID 22, localhost, partition 5,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 5.0 in stage 7.0 (TID 22)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 7.0 (TID 21) in 10545 ms on localhost (4/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000016.txt:0+4391412
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 17). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 7.0 (TID 23, localhost, partition 6,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 17) in 61157 ms on localhost (5/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 6.0 in stage 7.0 (TID 23)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000020.txt:0+6799647
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 5.0 in stage 7.0 (TID 22). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 7.0 (TID 24, localhost, partition 7,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 7.0 in stage 7.0 (TID 24)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000022.txt:0+5469067
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 7.0 (TID 22) in 11895 ms on localhost (6/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 6.0 in stage 7.0 (TID 23). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 7.0 (TID 25, localhost, partition 8,PROCESS_LOCAL, 2211 bytes)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 7.0 (TID 23) in 11546 ms on localhost (7/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 8.0 in stage 7.0 (TID 25)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000023.txt:0+7983568
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 7.0 in stage 7.0 (TID 24). 2407 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 7.0 (TID 26, localhost, partition 9,PROCESS_LOCAL, 2211 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 9.0 in stage 7.0 (TID 26)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 7.0 (TID 24) in 13632 ms on localhost (8/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000024.txt:0+5414532
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 8.0 in stage 7.0 (TID 25). 2407 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 7.0 (TID 25) in 14899 ms on localhost (9/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 9.0 in stage 7.0 (TID 26). 2407 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 7.0 (TID 26) in 9567 ms on localhost (10/10)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 7 (map at NaiveBayes.scala:383) finished in 95.826 s
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - running: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 8)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - failed: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 8 (ShuffledRDD[27] at combineByKey at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 3.2 KB, free 4.7 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1773.0 B, free 4.7 MB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on localhost:53112 (size: 1773.0 B, free: 1122.4 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ResultStage 8 (ShuffledRDD[27] at combineByKey at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 8.0 with 10 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 8.0 (TID 27, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 8.0 (TID 28, localhost, partition 2,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 0.0 in stage 8.0 (TID 27)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 8.0 (TID 28)
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 2 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 2 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 0.0 in stage 8.0 (TID 27). 8040577 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 8.0 (TID 29, localhost, partition 4,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 8.0 (TID 28). 8040577 bytes result sent to driver
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 4.0 in stage 8.0 (TID 29)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 8.0 (TID 30, localhost, partition 6,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 2 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 8.0 (TID 27) in 158 ms on localhost (1/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 6.0 in stage 8.0 (TID 30)
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_8_piece0 on localhost:53112 in memory (size: 742.0 KB, free: 1123.1 MB)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 8.0 (TID 28) in 166 ms on localhost (2/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 6.0 in stage 8.0 (TID 30). 4020991 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 8.0 (TID 31, localhost, partition 8,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 8.0 in stage 8.0 (TID 31)
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 3 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 2 ms
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 8.0 (TID 30) in 44 ms on localhost (3/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 4.0 in stage 8.0 (TID 29). 8040577 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 8.0 (TID 32, localhost, partition 1,PROCESS_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 1.0 in stage 8.0 (TID 32)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 1.0 in stage 8.0 (TID 32). 1161 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 8.0 (TID 33, localhost, partition 3,PROCESS_LOCAL, 1894 bytes)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 8.0 (TID 32) in 10 ms on localhost (4/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 3.0 in stage 8.0 (TID 33)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 8.0 (TID 29) in 77 ms on localhost (5/10)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 1 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 3.0 in stage 8.0 (TID 33). 1161 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 8.0 (TID 34, localhost, partition 5,PROCESS_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 5.0 in stage 8.0 (TID 34)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 8.0 (TID 33) in 10 ms on localhost (6/10)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 5.0 in stage 8.0 (TID 34). 1161 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 8.0 (TID 35, localhost, partition 7,PROCESS_LOCAL, 1894 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 8.0 (TID 34) in 4 ms on localhost (7/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 7.0 in stage 8.0 (TID 35)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 7.0 in stage 8.0 (TID 35). 1161 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 8.0 (TID 36, localhost, partition 9,PROCESS_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 9.0 in stage 8.0 (TID 36)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 10 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 9.0 in stage 8.0 (TID 36). 1161 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 8.0 (TID 36) in 5 ms on localhost (8/10)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 8.0 (TID 35) in 9 ms on localhost (9/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 8.0 in stage 8.0 (TID 31). 12060165 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 8.0 (TID 31) in 100 ms on localhost (10/10)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 8 (collect at NaiveBayes.scala:401) finished in 0.286 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 6 finished: collect at NaiveBayes.scala:401, took 96.171264 s
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 7 (count at TestNaiveBayes.scala:94) with 10 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 9 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 9 (MapPartitionsRDD[32] at filter at TestNaiveBayes.scala:94), which has no missing parents
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_9_piece0 on localhost:53112 in memory (size: 1773.0 B, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 15
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 14
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned shuffle 1
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 80.1 MB, free 80.3 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 4.0 MB, free 84.3 MB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on localhost:53112 (size: 4.0 MB, free: 1119.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10_piece1 stored as bytes in memory (estimated size 4.0 MB, free 88.3 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece1 in memory on localhost:53112 (size: 4.0 MB, free: 1115.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10_piece2 stored as bytes in memory (estimated size 2.9 MB, free 91.2 MB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece2 in memory on localhost:53112 (size: 2.9 MB, free: 1112.2 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ResultStage 9 (MapPartitionsRDD[32] at filter at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 9.0 with 10 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 9.0 (TID 37, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 9.0 (TID 38, localhost, partition 1,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 1.0 in stage 9.0 (TID 38)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 9.0 (TID 37)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000008.txt:0+5079486
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 1.0 in stage 9.0 (TID 38). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 9.0 (TID 39, localhost, partition 2,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 9.0 (TID 38) in 7414 ms on localhost (1/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 2.0 in stage 9.0 (TID 39)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000010.txt:0+3811321
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 2.0 in stage 9.0 (TID 39). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 9.0 (TID 40, localhost, partition 3,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 3.0 in stage 9.0 (TID 40)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 9.0 (TID 39) in 6479 ms on localhost (2/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000013.txt:0+5153953
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 3.0 in stage 9.0 (TID 40). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 9.0 (TID 41, localhost, partition 4,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 4.0 in stage 9.0 (TID 41)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 9.0 (TID 40) in 6691 ms on localhost (3/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000014.txt:0+3129138
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 4.0 in stage 9.0 (TID 41). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 9.0 (TID 42, localhost, partition 5,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 5.0 in stage 9.0 (TID 42)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 9.0 (TID 41) in 6873 ms on localhost (4/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 9.0 (TID 37). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 9.0 (TID 43, localhost, partition 6,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 9.0 (TID 37) in 27523 ms on localhost (5/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 6.0 in stage 9.0 (TID 43)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000016.txt:0+4391412
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000020.txt:0+6799647
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 5.0 in stage 9.0 (TID 42). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 9.0 (TID 44, localhost, partition 7,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 9.0 (TID 42) in 6147 ms on localhost (6/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 7.0 in stage 9.0 (TID 44)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000022.txt:0+5469067
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 6.0 in stage 9.0 (TID 43). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 9.0 (TID 45, localhost, partition 8,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 8.0 in stage 9.0 (TID 45)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 9.0 (TID 43) in 6863 ms on localhost (7/10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000023.txt:0+7983568
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 7.0 in stage 9.0 (TID 44). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 9.0 (TID 46, localhost, partition 9,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 9.0 in stage 9.0 (TID 46)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 9.0 (TID 44) in 6379 ms on localhost (8/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000024.txt:0+5414532
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 8.0 in stage 9.0 (TID 45). 2227 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 9.0 (TID 45) in 6625 ms on localhost (9/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 9.0 in stage 9.0 (TID 46). 2227 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 9.0 (TID 46) in 4569 ms on localhost (10/10)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 9 (count at TestNaiveBayes.scala:94) finished in 44.547 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 7 finished: count at TestNaiveBayes.scala:94, took 45.050967 s
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 8 (count at TestNaiveBayes.scala:94) with 10 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 10 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 10 (MapPartitionsRDD[30] at map at TestNaiveBayes.scala:85), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_11 stored as values in memory (estimated size 3.8 MB, free 95.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_11_piece0 stored as bytes in memory (estimated size 741.0 KB, free 95.7 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Added broadcast_11_piece0 in memory on localhost:53112 (size: 741.0 KB, free: 1111.5 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 11 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ResultStage 10 (MapPartitionsRDD[30] at map at TestNaiveBayes.scala:85)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 10.0 with 10 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 10.0 (TID 47, localhost, partition 0,PROCESS_LOCAL, 2222 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 10.0 (TID 48, localhost, partition 1,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 0.0 in stage 10.0 (TID 47)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 1.0 in stage 10.0 (TID 48)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000008.txt:0+5079486
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000007.txt:0+21284196
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 1.0 in stage 10.0 (TID 48). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 10.0 (TID 49, localhost, partition 2,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 10.0 (TID 49)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 10.0 (TID 48) in 506 ms on localhost (1/10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000010.txt:0+3811321
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 10.0 (TID 49). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 10.0 (TID 50, localhost, partition 3,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 10.0 (TID 49) in 412 ms on localhost (2/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 3.0 in stage 10.0 (TID 50)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000013.txt:0+5153953
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 3.0 in stage 10.0 (TID 50). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 10.0 (TID 51, localhost, partition 4,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 4.0 in stage 10.0 (TID 51)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 10.0 (TID 50) in 493 ms on localhost (3/10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000014.txt:0+3129138
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 4.0 in stage 10.0 (TID 51). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 10.0 (TID 52, localhost, partition 5,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 5.0 in stage 10.0 (TID 52)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 10.0 (TID 51) in 413 ms on localhost (4/10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000016.txt:0+4391412
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 0.0 in stage 10.0 (TID 47). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 10.0 (TID 53, localhost, partition 6,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 10.0 (TID 47) in 2025 ms on localhost (5/10)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 6.0 in stage 10.0 (TID 53)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000020.txt:0+6799647
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 5.0 in stage 10.0 (TID 52). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 10.0 (TID 54, localhost, partition 7,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 10.0 (TID 52) in 449 ms on localhost (6/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 7.0 in stage 10.0 (TID 54)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000022.txt:0+5469067
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 6.0 in stage 10.0 (TID 53). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 10.0 (TID 55, localhost, partition 8,PROCESS_LOCAL, 2222 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 8.0 in stage 10.0 (TID 55)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 10.0 (TID 53) in 583 ms on localhost (7/10)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000023.txt:0+7983568
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 7.0 in stage 10.0 (TID 54). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 10.0 (TID 56, localhost, partition 9,PROCESS_LOCAL, 2222 bytes)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 10.0 (TID 54) in 485 ms on localhost (8/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 9.0 in stage 10.0 (TID 56)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train/C000024.txt:0+5414532
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 8.0 in stage 10.0 (TID 55). 2227 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 10.0 (TID 55) in 584 ms on localhost (9/10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 9.0 in stage 10.0 (TID 56). 2227 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 10.0 (TID 56) in 446 ms on localhost (10/10)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 10 (count at TestNaiveBayes.scala:94) finished in 3.200 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 8 finished: count at TestNaiveBayes.scala:94, took 3.226451 s
+ INFO Thread-3 org.apache.spark.SparkContext - Invoking stop() from shutdown hook
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/api,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+ INFO Thread-3 org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://10.0.1.53:4040
+ INFO dispatcher-event-loop-2 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ INFO Thread-3 org.apache.spark.storage.MemoryStore - MemoryStore cleared
+ INFO Thread-3 org.apache.spark.storage.BlockManager - BlockManager stopped
+ INFO Thread-3 org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ INFO Thread-3 org.apache.spark.SparkContext - Successfully stopped SparkContext
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-4 akka.remote.RemoteActorRefProvider$RemotingTerminator - Shutting down remote daemon.
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-4f0de880-c5ab-421f-b031-3c52e5f5eca3
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-16 akka.remote.RemoteActorRefProvider$RemotingTerminator - Remote daemon shut down; proceeding with flushing remote transports.
+ INFO main org.apache.spark.SparkContext - Running Spark version 1.6.1
+ INFO main org.apache.spark.SecurityManager - Changing view acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - Changing modify acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 53181.
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 Remoting - Starting remoting
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 Remoting - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.0.1.53:53194]
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriverActorSystem' on port 53194.
+ INFO main org.apache.spark.SparkEnv - Registering MapOutputTracker
+ INFO main org.apache.spark.SparkEnv - Registering BlockManagerMaster
+ INFO main org.apache.spark.storage.DiskBlockManager - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-eaea54c5-5c1b-4778-bd9e-c1ae00fe78dc
+ INFO main org.apache.spark.storage.MemoryStore - MemoryStore started with capacity 1123.1 MB
+ INFO main org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+ INFO main org.spark-project.jetty.server.Server - jetty-8.y.z-SNAPSHOT
+ INFO main org.spark-project.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:4040
+ INFO main org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+ INFO main org.apache.spark.ui.SparkUI - Started SparkUI at http://10.0.1.53:4040
+ INFO main org.apache.spark.executor.Executor - Starting executor ID driver on host localhost
+ INFO main org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53205.
+ INFO main org.apache.spark.network.netty.NettyBlockTransferService - Server created on 53205
+ INFO main org.apache.spark.storage.BlockManagerMaster - Trying to register BlockManager
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager localhost:53205 with 1123.1 MB RAM, BlockManagerId(driver, localhost, 53205)
+ INFO main org.apache.spark.storage.BlockManagerMaster - Registered BlockManager
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on localhost:53205 (size: 13.9 KB, free: 1123.1 MB)
+ INFO main org.apache.spark.SparkContext - Created broadcast 0 from textFile at TestNaiveBayes.scala:39
+ WARN main  - Your hostname, YF-changjinJ resolves to a loopback/non-reachable address: fe80:0:0:0:71f4:de5b:2450:4f1c%eth8, but we couldn't find any external IP address!
+ INFO Thread-3 org.apache.spark.SparkContext - Invoking stop() from shutdown hook
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/api,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+ INFO Thread-3 org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://10.0.1.53:4040
+ INFO dispatcher-event-loop-3 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ INFO Thread-3 org.apache.spark.storage.MemoryStore - MemoryStore cleared
+ INFO Thread-3 org.apache.spark.storage.BlockManager - BlockManager stopped
+ INFO Thread-3 org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ INFO Thread-3 org.apache.spark.SparkContext - Successfully stopped SparkContext
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-4 akka.remote.RemoteActorRefProvider$RemotingTerminator - Shutting down remote daemon.
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-4 akka.remote.RemoteActorRefProvider$RemotingTerminator - Remote daemon shut down; proceeding with flushing remote transports.
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-edbd645c-c1d3-4d95-b43f-7420748e4fcd
+ INFO main org.apache.spark.SparkContext - Running Spark version 1.6.1
+ INFO main org.apache.spark.SecurityManager - Changing view acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - Changing modify acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 53260.
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-4 akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-4 Remoting - Starting remoting
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-2 Remoting - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.0.1.53:53273]
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriverActorSystem' on port 53273.
+ INFO main org.apache.spark.SparkEnv - Registering MapOutputTracker
+ INFO main org.apache.spark.SparkEnv - Registering BlockManagerMaster
+ INFO main org.apache.spark.storage.DiskBlockManager - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-d91e2748-d8e0-4331-9b75-1fe8b152425d
+ INFO main org.apache.spark.storage.MemoryStore - MemoryStore started with capacity 1123.1 MB
+ INFO main org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+ INFO main org.spark-project.jetty.server.Server - jetty-8.y.z-SNAPSHOT
+ INFO main org.spark-project.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:4040
+ INFO main org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+ INFO main org.apache.spark.ui.SparkUI - Started SparkUI at http://10.0.1.53:4040
+ INFO main org.apache.spark.executor.Executor - Starting executor ID driver on host localhost
+ INFO main org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53285.
+ INFO main org.apache.spark.network.netty.NettyBlockTransferService - Server created on 53285
+ INFO main org.apache.spark.storage.BlockManagerMaster - Trying to register BlockManager
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager localhost:53285 with 1123.1 MB RAM, BlockManagerId(driver, localhost, 53285)
+ INFO main org.apache.spark.storage.BlockManagerMaster - Registered BlockManager
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on localhost:53285 (size: 13.9 KB, free: 1123.1 MB)
+ INFO main org.apache.spark.SparkContext - Created broadcast 0 from textFile at TestNaiveBayes.scala:39
+ WARN main  - Your hostname, YF-changjinJ resolves to a loopback/non-reachable address: fe80:0:0:0:71f4:de5b:2450:4f1c%eth8, but we couldn't find any external IP address!
+ INFO main org.apache.hadoop.mapred.FileInputFormat - Total input paths to process : 3
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:44
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 0 (take at TestNaiveBayes.scala:44) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 0 (take at TestNaiveBayes.scala:44)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1 stored as values in memory (estimated size 3.4 KB, free 144.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 146.7 KB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_1_piece0 in memory on localhost:53285 (size: 2.0 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 0.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 0.0 (TID 0)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 0.0 (TID 0). 2321 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 138 ms on localhost (1/1)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 0 (take at TestNaiveBayes.scala:44) finished in 0.157 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 0 finished: take at TestNaiveBayes.scala:44, took 0.245899 s
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_1_piece0 on localhost:53285 in memory (size: 2.0 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 1
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:55
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 1 (take at TestNaiveBayes.scala:55) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 1 (take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2 stored as values in memory (estimated size 8.6 KB, free 150.0 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.4 KB, free 154.4 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_2_piece0 in memory on localhost:53285 (size: 4.4 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 1.0 with 1 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 1.0 (TID 1)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 375.544778 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 20.335532 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 1.0 (TID 1). 2760 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 508 ms on localhost (1/1)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 1 (take at TestNaiveBayes.scala:55) finished in 0.511 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 1 finished: take at TestNaiveBayes.scala:55, took 0.533371 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:61
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 2 (take at TestNaiveBayes.scala:61) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 2 (take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 9.3 KB, free 163.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.8 KB, free 168.5 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on localhost:53285 (size: 4.8 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 49.034932 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 18.994984 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 3020 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 126 ms on localhost (1/1)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (take at TestNaiveBayes.scala:61) finished in 0.124 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 2 finished: take at TestNaiveBayes.scala:61, took 0.149432 s
+ INFO main org.apache.spark.SparkContext - Starting job: treeAggregate at IDF.scala:54
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 3 (treeAggregate at IDF.scala:54) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 3 (MapPartitionsRDD[16] at treeAggregate at IDF.scala:54), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 10.4 KB, free 179.0 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.3 KB, free 184.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on localhost:53285 (size: 5.3 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 3 (MapPartitionsRDD[16] at treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 3 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 3.0 (TID 4, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 3.0 (TID 4)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 56.778481 ms
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_3_piece0 on localhost:53285 in memory (size: 4.8 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 6
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 5
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 3.0 (TID 4). 4022035 bytes result sent to driver
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 4022035 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 3.0 (TID 5, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 3.0 (TID 5)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 3.0 (TID 5). 4022035 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 3.0 (TID 4) in 730 ms on localhost (1/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 747 ms on localhost (2/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 3.0 (TID 5) in 93 ms on localhost (3/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 3 (treeAggregate at IDF.scala:54) finished in 0.767 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 3 finished: treeAggregate at IDF.scala:54, took 0.784590 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:68
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 4 (take at TestNaiveBayes.scala:68) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 4 (take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 4 (MapPartitionsRDD[19] at take at TestNaiveBayes.scala:68), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 3.8 MB, free 4.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 190.9 KB, free 4.2 MB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on localhost:53285 (size: 190.9 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[19] at take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 4.0 with 1 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 4.0 (TID 6, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 4.0 (TID 6)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 35.050178 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 17.056154 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 4.0 (TID 6). 2924 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 4.0 (TID 6) in 89 ms on localhost (1/1)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 4 (take at TestNaiveBayes.scala:68) finished in 0.090 s
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 4 finished: take at TestNaiveBayes.scala:68, took 0.120425 s
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_5_piece0 on localhost:53285 in memory (size: 190.9 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 10
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 9
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_4_piece0 on localhost:53285 in memory (size: 5.3 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 8
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 7
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:76
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 5 (take at TestNaiveBayes.scala:76) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 5 (take at TestNaiveBayes.scala:76)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 5 (MapPartitionsRDD[22] at map at TestNaiveBayes.scala:71), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 3.8 MB, free 4.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 191.4 KB, free 4.2 MB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on localhost:53285 (size: 191.4 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[22] at map at TestNaiveBayes.scala:71)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 5.0 with 1 tasks
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 5.0 (TID 7, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 5.0 (TID 7)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 5.0 (TID 7). 4021978 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 5.0 (TID 7) in 50 ms on localhost (1/1)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 5 (take at TestNaiveBayes.scala:76) finished in 0.051 s
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 5 finished: take at TestNaiveBayes.scala:76, took 0.080113 s
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_6_piece0 on localhost:53285 in memory (size: 191.4 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 12
+ INFO main org.apache.spark.SparkContext - Starting job: collect at NaiveBayes.scala:401
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Registering RDD 23 (map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 6 (collect at NaiveBayes.scala:401) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 7 (collect at NaiveBayes.scala:401)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 6)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 6)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 6 (MapPartitionsRDD[23] at map at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 3.8 MB, free 4.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 191.9 KB, free 4.2 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on localhost:53285 (size: 191.9 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[23] at map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 6.0 with 3 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 6.0 (TID 8, localhost, partition 0,PROCESS_LOCAL, 2216 bytes)
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 6.0 (TID 9, localhost, partition 1,PROCESS_LOCAL, 2216 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 6.0 (TID 8)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 6.0 (TID 9)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ WARN Executor task launch worker-1 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+ WARN Executor task launch worker-1 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 6.0 (TID 9). 2400 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 6.0 (TID 10, localhost, partition 2,PROCESS_LOCAL, 2216 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 6.0 (TID 9) in 170 ms on localhost (1/3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 2.0 in stage 6.0 (TID 10)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 6.0 (TID 8). 2400 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 6.0 (TID 8) in 183 ms on localhost (2/3)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 2.0 in stage 6.0 (TID 10). 2400 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 6.0 (TID 10) in 107 ms on localhost (3/3)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 6 (map at NaiveBayes.scala:383) finished in 0.280 s
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - running: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 7)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - failed: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 7 (ShuffledRDD[24] at combineByKey at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 3.2 KB, free 4.2 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 1779.0 B, free 4.2 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on localhost:53285 (size: 1779.0 B, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 7 (ShuffledRDD[24] at combineByKey at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 3 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 11, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 7.0 (TID 12, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 11)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 1.0 in stage 7.0 (TID 12)
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 2 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 4 ms
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 4 ms
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_7_piece0 on localhost:53285 in memory (size: 191.9 KB, free: 1123.1 MB)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 1.0 in stage 7.0 (TID 12). 4020991 bytes result sent to driver
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 11). 8040577 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 7.0 (TID 13, localhost, partition 2,PROCESS_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 2.0 in stage 7.0 (TID 13)
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-2 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 1 ms
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 2.0 in stage 7.0 (TID 13). 1161 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 7.0 (TID 12) in 126 ms on localhost (1/3)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 11) in 141 ms on localhost (2/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 7.0 (TID 13) in 25 ms on localhost (3/3)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 7 (collect at NaiveBayes.scala:401) finished in 0.145 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 6 finished: collect at NaiveBayes.scala:401, took 0.484820 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_8_piece0 on localhost:53285 in memory (size: 1779.0 B, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 14
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 13
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned shuffle 0
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_2_piece0 on localhost:53285 in memory (size: 4.4 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 4
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 3
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 7 (count at TestNaiveBayes.scala:94) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 8 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 8 (MapPartitionsRDD[29] at filter at TestNaiveBayes.scala:94), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 26.7 MB, free 26.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1302.5 KB, free 28.1 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on localhost:53285 (size: 1302.5 KB, free: 1121.8 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 8 (MapPartitionsRDD[29] at filter at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 8.0 with 3 tasks
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 8.0 (TID 14, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 8.0 (TID 15, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 8.0 (TID 15)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 0.0 in stage 8.0 (TID 14)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 0.0 in stage 8.0 (TID 14). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 8.0 (TID 16, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 2.0 in stage 8.0 (TID 16)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 8.0 (TID 14) in 41 ms on localhost (1/3)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 2.0 in stage 8.0 (TID 16). 2227 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 8.0 (TID 16) in 43 ms on localhost (2/3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 8.0 (TID 15). 2227 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 8.0 (TID 15) in 133 ms on localhost (3/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 8 (count at TestNaiveBayes.scala:94) finished in 0.135 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 7 finished: count at TestNaiveBayes.scala:94, took 0.225238 s
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 8 (count at TestNaiveBayes.scala:94) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 9 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 9 (MapPartitionsRDD[27] at map at TestNaiveBayes.scala:85), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 3.8 MB, free 32.0 MB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_9_piece0 on localhost:53285 in memory (size: 1302.5 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 191.3 KB, free 4.2 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 16
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on localhost:53285 (size: 191.3 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 9 (MapPartitionsRDD[27] at map at TestNaiveBayes.scala:85)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 9.0 with 3 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 9.0 (TID 17, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 9.0 (TID 18, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 0.0 in stage 9.0 (TID 17)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 1.0 in stage 9.0 (TID 18)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 1.0 in stage 9.0 (TID 18). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 9.0 (TID 19, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Running task 2.0 in stage 9.0 (TID 19)
+ INFO Executor task launch worker-2 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 0.0 in stage 9.0 (TID 17). 2227 bytes result sent to driver
+ INFO Executor task launch worker-2 org.apache.spark.executor.Executor - Finished task 2.0 in stage 9.0 (TID 19). 2227 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 9.0 (TID 18) in 45 ms on localhost (1/3)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 9.0 (TID 17) in 46 ms on localhost (2/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 9.0 (TID 19) in 19 ms on localhost (3/3)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 9 (count at TestNaiveBayes.scala:94) finished in 0.047 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 8 finished: count at TestNaiveBayes.scala:94, took 0.092676 s
+ INFO Thread-3 org.apache.spark.SparkContext - Invoking stop() from shutdown hook
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/api,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+ INFO Thread-3 org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://10.0.1.53:4040
+ INFO dispatcher-event-loop-0 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ INFO Thread-3 org.apache.spark.storage.MemoryStore - MemoryStore cleared
+ INFO Thread-3 org.apache.spark.storage.BlockManager - BlockManager stopped
+ INFO Thread-3 org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ INFO Thread-3 org.apache.spark.SparkContext - Successfully stopped SparkContext
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-d861904a-88e8-41df-8de6-df7dae1d57e0
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-3 akka.remote.RemoteActorRefProvider$RemotingTerminator - Shutting down remote daemon.
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-3 akka.remote.RemoteActorRefProvider$RemotingTerminator - Remote daemon shut down; proceeding with flushing remote transports.
+ INFO main org.apache.spark.SparkContext - Running Spark version 1.6.1
+ INFO main org.apache.spark.SecurityManager - Changing view acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - Changing modify acls to: Administrator
+ INFO main org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Administrator); users with modify permissions: Set(Administrator)
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 53330.
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-7 akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-9 Remoting - Starting remoting
+ INFO sparkDriverActorSystem-akka.actor.default-dispatcher-9 Remoting - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.0.1.53:53343]
+ INFO main org.apache.spark.util.Utils - Successfully started service 'sparkDriverActorSystem' on port 53343.
+ INFO main org.apache.spark.SparkEnv - Registering MapOutputTracker
+ INFO main org.apache.spark.SparkEnv - Registering BlockManagerMaster
+ INFO main org.apache.spark.storage.DiskBlockManager - Created local directory at C:\Users\Administrator\AppData\Local\Temp\blockmgr-7b9ade87-acd7-4ad6-bd16-06dbb23cf9d3
+ INFO main org.apache.spark.storage.MemoryStore - MemoryStore started with capacity 1123.1 MB
+ INFO main org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+ INFO main org.spark-project.jetty.server.Server - jetty-8.y.z-SNAPSHOT
+ INFO main org.spark-project.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:4040
+ INFO main org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+ INFO main org.apache.spark.ui.SparkUI - Started SparkUI at http://10.0.1.53:4040
+ INFO main org.apache.spark.executor.Executor - Starting executor ID driver on host localhost
+ INFO main org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 53354.
+ INFO main org.apache.spark.network.netty.NettyBlockTransferService - Server created on 53354
+ INFO main org.apache.spark.storage.BlockManagerMaster - Trying to register BlockManager
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager localhost:53354 with 1123.1 MB RAM, BlockManagerId(driver, localhost, 53354)
+ INFO main org.apache.spark.storage.BlockManagerMaster - Registered BlockManager
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+ INFO main org.apache.spark.storage.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on localhost:53354 (size: 13.9 KB, free: 1123.1 MB)
+ INFO main org.apache.spark.SparkContext - Created broadcast 0 from textFile at TestNaiveBayes.scala:39
+ WARN main  - Your hostname, YF-changjinJ resolves to a loopback/non-reachable address: fe80:0:0:0:71f4:de5b:2450:4f1c%eth8, but we couldn't find any external IP address!
+ INFO main org.apache.hadoop.mapred.FileInputFormat - Total input paths to process : 3
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:44
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 0 (take at TestNaiveBayes.scala:44) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 0 (take at TestNaiveBayes.scala:44)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1 stored as values in memory (estimated size 3.4 KB, free 144.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 146.7 KB)
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Added broadcast_1_piece0 in memory on localhost:53354 (size: 2.0 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at TestNaiveBayes.scala:39)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 0.0 with 1 tasks
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 0.0 (TID 0)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+ INFO Executor task launch worker-0 org.apache.hadoop.conf.Configuration.deprecation - mapred.job.id is deprecated. Instead, use mapreduce.job.id
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 0.0 (TID 0). 2321 bytes result sent to driver
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 138 ms on localhost (1/1)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 0 (take at TestNaiveBayes.scala:44) finished in 0.157 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 0 finished: take at TestNaiveBayes.scala:44, took 0.256904 s
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_1_piece0 on localhost:53354 in memory (size: 2.0 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 1
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:55
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 1 (take at TestNaiveBayes.scala:55) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 1 (take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2 stored as values in memory (estimated size 8.6 KB, free 150.0 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.4 KB, free 154.4 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_2_piece0 in memory on localhost:53354 (size: 4.4 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at take at TestNaiveBayes.scala:55)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 1.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 1.0 (TID 1)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 354.490824 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 16.237214 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 1.0 (TID 1). 2760 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 472 ms on localhost (1/1)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 1 (take at TestNaiveBayes.scala:55) finished in 0.476 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 1 finished: take at TestNaiveBayes.scala:55, took 0.497857 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:61
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 2 (take at TestNaiveBayes.scala:61) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 2 (take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 9.3 KB, free 163.7 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.8 KB, free 168.5 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on localhost:53354 (size: 4.8 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[12] at take at TestNaiveBayes.scala:61)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 50.92637 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 15.622632 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 3020 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 125 ms on localhost (1/1)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (take at TestNaiveBayes.scala:61) finished in 0.126 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 2 finished: take at TestNaiveBayes.scala:61, took 0.141623 s
+ INFO main org.apache.spark.SparkContext - Starting job: treeAggregate at IDF.scala:54
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 3 (treeAggregate at IDF.scala:54) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 3 (MapPartitionsRDD[16] at treeAggregate at IDF.scala:54), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 10.4 KB, free 179.0 KB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.3 KB, free 184.3 KB)
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on localhost:53354 (size: 5.3 KB, free: 1123.1 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 3 (MapPartitionsRDD[16] at treeAggregate at IDF.scala:54)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 3 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 3.0 (TID 4, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 3.0 (TID 4)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 45.978323 ms
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 3.0 (TID 4). 4022035 bytes result sent to driver
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 4022035 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 3.0 (TID 5, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 3.0 (TID 4) in 645 ms on localhost (1/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 647 ms on localhost (2/3)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 3.0 (TID 5)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 3.0 (TID 5). 4022035 bytes result sent to driver
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_3_piece0 on localhost:53354 in memory (size: 4.8 KB, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 6
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 5
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 3.0 (TID 5) in 114 ms on localhost (3/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 3 (treeAggregate at IDF.scala:54) finished in 0.718 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 3 finished: treeAggregate at IDF.scala:54, took 0.748482 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:68
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 4 (take at TestNaiveBayes.scala:68) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 4 (take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 4 (MapPartitionsRDD[19] at take at TestNaiveBayes.scala:68), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 3.8 MB, free 4.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 190.9 KB, free 4.2 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on localhost:53354 (size: 190.9 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[19] at take at TestNaiveBayes.scala:68)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 4.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 4.0 (TID 6, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 4.0 (TID 6)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateUnsafeProjection - Code generated in 43.406196 ms
+ INFO Executor task launch worker-0 org.apache.spark.sql.catalyst.expressions.codegen.GenerateSafeProjection - Code generated in 14.792222 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 4.0 (TID 6). 2924 bytes result sent to driver
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 4.0 (TID 6) in 107 ms on localhost (1/1)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 4 (take at TestNaiveBayes.scala:68) finished in 0.109 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 4 finished: take at TestNaiveBayes.scala:68, took 0.137191 s
+ INFO main org.apache.spark.SparkContext - Starting job: take at TestNaiveBayes.scala:76
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 5 (take at TestNaiveBayes.scala:76) with 1 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 5 (take at TestNaiveBayes.scala:76)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 5 (MapPartitionsRDD[22] at map at TestNaiveBayes.scala:71), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 3.8 MB, free 8.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 191.3 KB, free 8.2 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on localhost:53354 (size: 191.3 KB, free: 1122.7 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[22] at map at TestNaiveBayes.scala:71)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 5.0 with 1 tasks
+ INFO dispatcher-event-loop-1 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 5.0 (TID 7, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 5.0 (TID 7)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 5.0 (TID 7). 4021978 bytes result sent to driver
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 5.0 (TID 7) in 56 ms on localhost (1/1)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 5 (take at TestNaiveBayes.scala:76) finished in 0.056 s
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 5 finished: take at TestNaiveBayes.scala:76, took 0.081035 s
+ INFO main org.apache.spark.SparkContext - Starting job: collect at NaiveBayes.scala:401
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Registering RDD 23 (map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 6 (collect at NaiveBayes.scala:401) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 7 (collect at NaiveBayes.scala:401)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 6)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 6)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 6 (MapPartitionsRDD[23] at map at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 3.8 MB, free 12.0 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 7
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 8
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_4_piece0 on localhost:53354 in memory (size: 5.3 KB, free: 1122.7 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 9
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 10
+ INFO dispatcher-event-loop-1 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_5_piece0 on localhost:53354 in memory (size: 190.9 KB, free: 1122.9 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 12
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 191.9 KB, free 8.2 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on localhost:53354 (size: 191.9 KB, free: 1122.7 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_6_piece0 on localhost:53354 in memory (size: 191.3 KB, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[23] at map at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 6.0 with 3 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 6.0 (TID 8, localhost, partition 0,PROCESS_LOCAL, 2216 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 6.0 (TID 9, localhost, partition 1,PROCESS_LOCAL, 2216 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 0.0 in stage 6.0 (TID 8)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 1.0 in stage 6.0 (TID 9)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ WARN Executor task launch worker-1 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+ WARN Executor task launch worker-1 com.github.fommil.netlib.BLAS - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 0.0 in stage 6.0 (TID 8). 2400 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 6.0 (TID 10, localhost, partition 2,PROCESS_LOCAL, 2216 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 6.0 (TID 8) in 114 ms on localhost (1/3)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 6.0 (TID 10)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 6.0 (TID 10). 2400 bytes result sent to driver
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 1.0 in stage 6.0 (TID 9). 2400 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 6.0 (TID 10) in 101 ms on localhost (2/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 6.0 (TID 9) in 212 ms on localhost (3/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 6 (map at NaiveBayes.scala:383) finished in 0.220 s
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - running: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 7)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - failed: Set()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 7 (ShuffledRDD[24] at combineByKey at NaiveBayes.scala:383), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 3.2 KB, free 4.2 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 1779.0 B, free 4.2 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on localhost:53354 (size: 1779.0 B, free: 1122.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 7 (ShuffledRDD[24] at combineByKey at NaiveBayes.scala:383)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 3 tasks
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 11, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 7.0 (TID 12, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 1.0 in stage 7.0 (TID 12)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 11)
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 2 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+ INFO Executor task launch worker-0 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 1.0 in stage 7.0 (TID 12). 4020991 bytes result sent to driver
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 11). 8040577 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_7_piece0 on localhost:53354 in memory (size: 191.9 KB, free: 1123.1 MB)
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 7.0 (TID 13, localhost, partition 2,PROCESS_LOCAL, 1894 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 2.0 in stage 7.0 (TID 13)
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 non-empty blocks out of 3 blocks
+ INFO Executor task launch worker-1 org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 2.0 in stage 7.0 (TID 13). 1161 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 7.0 (TID 13) in 9 ms on localhost (1/3)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 7.0 (TID 12) in 135 ms on localhost (2/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 11) in 139 ms on localhost (3/3)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 7 (collect at NaiveBayes.scala:401) finished in 0.140 s
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 6 finished: collect at NaiveBayes.scala:401, took 0.437258 s
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 7 (count at TestNaiveBayes.scala:94) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 8 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 8 (MapPartitionsRDD[29] at filter at TestNaiveBayes.scala:94), which has no missing parents
+ INFO dispatcher-event-loop-0 org.apache.spark.storage.BlockManagerInfo - Removed broadcast_8_piece0 on localhost:53354 in memory (size: 1779.0 B, free: 1123.1 MB)
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 14
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned accumulator 13
+ INFO Spark Context Cleaner org.apache.spark.ContextCleaner - Cleaned shuffle 0
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 26.7 MB, free 26.9 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1302.3 KB, free 28.1 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on localhost:53354 (size: 1302.3 KB, free: 1121.8 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 8 (MapPartitionsRDD[29] at filter at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 8.0 with 3 tasks
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 8.0 (TID 14, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 8.0 (TID 15, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 0.0 in stage 8.0 (TID 14)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 1.0 in stage 8.0 (TID 15)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 1.0 in stage 8.0 (TID 15). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-3 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 8.0 (TID 16, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO task-result-getter-2 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 8.0 (TID 15) in 52 ms on localhost (1/3)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 2.0 in stage 8.0 (TID 16)
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 2.0 in stage 8.0 (TID 16). 2227 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 8.0 (TID 16) in 98 ms on localhost (2/3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 0.0 in stage 8.0 (TID 14). 2227 bytes result sent to driver
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 8 (count at TestNaiveBayes.scala:94) finished in 0.172 s
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 8.0 (TID 14) in 168 ms on localhost (3/3)
+ INFO task-result-getter-3 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 7 finished: count at TestNaiveBayes.scala:94, took 0.274635 s
+ INFO main org.apache.spark.SparkContext - Starting job: count at TestNaiveBayes.scala:94
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Got job 8 (count at TestNaiveBayes.scala:94) with 3 output partitions
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 9 (count at TestNaiveBayes.scala:94)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 9 (MapPartitionsRDD[27] at map at TestNaiveBayes.scala:85), which has no missing parents
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 3.8 MB, free 32.0 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.storage.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 191.3 KB, free 32.2 MB)
+ INFO dispatcher-event-loop-3 org.apache.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on localhost:53354 (size: 191.3 KB, free: 1121.6 MB)
+ INFO dag-scheduler-event-loop org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - Submitting 3 missing tasks from ResultStage 9 (MapPartitionsRDD[27] at map at TestNaiveBayes.scala:85)
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 9.0 with 3 tasks
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 9.0 (TID 17, localhost, partition 0,PROCESS_LOCAL, 2227 bytes)
+ INFO dispatcher-event-loop-0 org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 9.0 (TID 18, localhost, partition 1,PROCESS_LOCAL, 2227 bytes)
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Running task 1.0 in stage 9.0 (TID 18)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 0.0 in stage 9.0 (TID 17)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000007.txt:0+96
+ INFO Executor task launch worker-0 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000008.txt:0+107
+ INFO Executor task launch worker-0 org.apache.spark.executor.Executor - Finished task 1.0 in stage 9.0 (TID 18). 2227 bytes result sent to driver
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 0.0 in stage 9.0 (TID 17). 2227 bytes result sent to driver
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 9.0 (TID 19, localhost, partition 2,PROCESS_LOCAL, 2227 bytes)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 9.0 (TID 18) in 30 ms on localhost (1/3)
+ INFO task-result-getter-0 org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 9.0 (TID 17) in 31 ms on localhost (2/3)
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Running task 2.0 in stage 9.0 (TID 19)
+ INFO Executor task launch worker-1 org.apache.spark.rdd.HadoopRDD - Input split: file:/F:/CommonDevelop/hadoop/project/spark/spark/src/main/scala/com/antin/test/test/tfidf/data/sougou-train-test/C000010.txt:0+57
+ INFO Executor task launch worker-1 org.apache.spark.executor.Executor - Finished task 2.0 in stage 9.0 (TID 19). 2227 bytes result sent to driver
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 9.0 (TID 19) in 21 ms on localhost (3/3)
+ INFO task-result-getter-1 org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+ INFO dag-scheduler-event-loop org.apache.spark.scheduler.DAGScheduler - ResultStage 9 (count at TestNaiveBayes.scala:94) finished in 0.047 s
+ INFO main org.apache.spark.scheduler.DAGScheduler - Job 8 finished: count at TestNaiveBayes.scala:94, took 0.069448 s
+ INFO Thread-3 org.apache.spark.SparkContext - Invoking stop() from shutdown hook
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static/sql,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/execution,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/SQL,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/api,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/static,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/executors,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/environment,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/storage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/stages,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+ INFO Thread-3 org.spark-project.jetty.server.handler.ContextHandler - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+ INFO Thread-3 org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://10.0.1.53:4040
+ INFO dispatcher-event-loop-0 org.apache.spark.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ INFO Thread-3 org.apache.spark.storage.MemoryStore - MemoryStore cleared
+ INFO Thread-3 org.apache.spark.storage.BlockManager - BlockManager stopped
+ INFO Thread-3 org.apache.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+ INFO dispatcher-event-loop-2 org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ INFO Thread-3 org.apache.spark.SparkContext - Successfully stopped SparkContext
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Shutdown hook called
+ INFO Thread-3 org.apache.spark.util.ShutdownHookManager - Deleting directory C:\Users\Administrator\AppData\Local\Temp\spark-3f9b0305-9691-4b7c-8778-4d1948778537
+ 
